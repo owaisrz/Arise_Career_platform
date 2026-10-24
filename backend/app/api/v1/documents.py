@@ -42,7 +42,7 @@ async def upload_document(
     
     # Check for duplicate
     dup_res = await db.execute(select(Document).where(Document.user_id == current_user.id, Document.file_hash == file_hash))
-    existing_dup = dup_res.scalar_one_or_none()
+    existing_dup = dup_res.scalars().first()
     is_duplicate = existing_dup is not None
 
     # Generate secure random storage filename

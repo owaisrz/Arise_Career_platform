@@ -1,0 +1,13 @@
+Alex Morgan
+Software Engineer | Full Stack
+Skills: Python, FastAPI, React, PostgreSQL, Docker, Redis
+
+Experience:
+Senior Developer at TechWave (2022 - Present)
+- Designed and built high-throughput REST APIs using FastAPI and PostgreSQL.
+- Implemented microservices deployed via Docker containers.
+
+Projects:
+Microservices E-Commerce Platform
+- Built scalable event-driven backend using Python and Redis.
+- Developed real-time analytics dashboard with React.
