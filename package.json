@@ -1,0 +1,11 @@
+{
+  "name": "careerloom-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Careerloom — IMPACTX 2026 Challenge 05 Career Intelligence Platform",
+  "scripts": {
+    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "start": "npm --prefix frontend run preview"
+  }
+}

@@ -273,6 +273,30 @@ Structured into 4 progressive stages:
 
 ---
 
-## 9. License
+## 9. Vercel & Production Deployment Guide
+
+### Resolving Vercel `404 NOT_FOUND`
+If you encounter `404 NOT_FOUND` (`bom1::...`) when deploying or refreshing routes on Vercel:
+1. **SPA Rewrites**: Single Page Applications using HTML5 pushState routing need all requests to fall back to `/index.html`. We have added `vercel.json` and `frontend/vercel.json` with:
+   ```json
+   {
+     "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+   }
+   ```
+2. **Deploying from Repository Root**:
+   - The root [`package.json`](file:///c:/Users/OWAIS%20RAZA/Desktop/MC/package.json) runs `npm --prefix frontend install && npm --prefix frontend run build`.
+   - The root [`vercel.json`](file:///c:/Users/OWAIS%20RAZA/Desktop/MC/vercel.json) points `outputDirectory` to `frontend/dist`.
+3. **Deploying `frontend/` as Root Directory in Vercel**:
+   - In Vercel Project Settings > General > **Root Directory**, set to `frontend`.
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+4. **Connecting Backend API (`VITE_API_BASE_URL`)**:
+   - In Vercel Project Settings > **Environment Variables**, add:
+     - Key: `VITE_API_BASE_URL`
+     - Value: `https://your-backend-service.onrender.com/api/v1` (or your deployed backend URL).
+
+---
+
+## 10. License
 
 Developed for the **IMPACTX 2026 Challenge 05: "From Job Search to Career Journey"**. All rights reserved.

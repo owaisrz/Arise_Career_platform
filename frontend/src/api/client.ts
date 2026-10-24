@@ -1,4 +1,5 @@
-const BASE_URL = '/api/v1';
+const rawBase = (import.meta.env.VITE_API_BASE_URL as string | undefined) || '/api/v1';
+const BASE_URL = rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
 
 export function getStoredToken(): string | null {
   return localStorage.getItem('careerloom_token');
