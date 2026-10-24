@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+frontend/node_modules
+dist
+frontend/dist
+
+# Python
+backend/venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+
+# Storage & DB
+careerloom.db
+uploads/*
+!uploads/.gitkeep
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
