@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <defs>
+    <linearGradient id="threadA" x1="4" y1="8" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#163B32" />
+      <stop offset="50%" stop-color="#79B9AC" />
+      <stop offset="100%" stop-color="#C47B54" />
+    </linearGradient>
+    <linearGradient id="threadB" x1="44" y1="8" x2="4" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C47B54" />
+      <stop offset="50%" stop-color="#79B9AC" />
+      <stop offset="100%" stop-color="#102C26" />
+    </linearGradient>
+  </defs>
+  <!-- Background organic crystal disc -->
+  <rect width="44" height="44" x="2" y="2" rx="14" fill="#DCE9E0" fill-opacity="0.45" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" />
+  
+  <!-- Interwoven Career Loom Threads -->
+  <path d="M10 24C10 16 16 12 24 12C32 12 38 16 38 24C38 32 32 36 24 36C16 36 10 32 10 24Z" stroke="url(#threadA)" stroke-width="3" stroke-linecap="round" fill="none" />
+  <path d="M14 14C20 20 28 28 34 34M34 14C28 20 20 28 14 34" stroke="url(#threadB)" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="24" cy="24" r="3.5" fill="#163B32" stroke="#FFFFFF" stroke-width="1.5" />
+</svg>
